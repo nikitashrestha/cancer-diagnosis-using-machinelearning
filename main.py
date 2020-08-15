@@ -243,6 +243,7 @@ def plot_confusion_matrix(test_y, predict_y):
     sns.heatmap(
         C, annot=True, cmap="YlGnBu", fmt=".3f", xticklabels=labels, yticklabels=labels
     )
+    plt.title("Confusion Matrix")
     plt.xlabel("Predicted Class")
     plt.ylabel("Original Class")
     plt.show()
@@ -252,6 +253,8 @@ def plot_confusion_matrix(test_y, predict_y):
     sns.heatmap(
         B, annot=True, cmap="YlGnBu", fmt=".3f", xticklabels=labels, yticklabels=labels
     )
+    plt.title("Precision matrix (Columm Sum=1)")
+
     plt.xlabel("Predicted Class")
     plt.ylabel("Original Class")
     plt.show()
@@ -262,6 +265,7 @@ def plot_confusion_matrix(test_y, predict_y):
     sns.heatmap(
         A, annot=True, cmap="YlGnBu", fmt=".3f", xticklabels=labels, yticklabels=labels
     )
+    plt.title("Recall matrix (Row sum=1)")
     plt.xlabel("Predicted Class")
     plt.ylabel("Original Class")
     plt.show()
